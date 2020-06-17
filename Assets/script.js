@@ -7,7 +7,14 @@ $(document).ready(function () {
         // gets div with time i
         var div = $("div").find(`[data-time="${i}"]`);
 
+        // gets text out of local storage
+        var savedText = localStorage.getItem(i);
+        // sets textarea 
+        var textArea = $("textarea#" + i + "-text");
+        // sets textarea's text to saved text
+        textArea.val(savedText);
 
+        console.log(savedText);
 
 
         // finds btn with id of i
@@ -15,11 +22,13 @@ $(document).ready(function () {
 
         // btn click
         btn.click(function () {
-            // finds text area
+            // finds text area (Needs to happen again??? think scope is why)
             var textArea = $("textarea#" + i + "-text");
             // logs the text in text area
             console.log(textArea.val());
 
+            // saves the text from textarea to localstorage at point i
+            localStorage.setItem(i, textArea.val());
 
 
         });
