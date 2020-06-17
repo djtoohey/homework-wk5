@@ -1,6 +1,14 @@
 $(document).ready(function () {
+    // gets current date
+    date = moment().format("dddd, MMMM Do");
+
     // gets the current hour
     hour = parseInt(moment().format("HH"));
+
+    // gets id of currentDay
+    currentDayTxt = $("#currentDay");
+    // sets to date
+    currentDayTxt.text(date);
 
     // loops through times
     for (let i = 9; i < (18); i++) {
@@ -14,7 +22,7 @@ $(document).ready(function () {
         // sets textarea's text to saved text
         textArea.val(savedText);
 
-        console.log(savedText);
+        // console.log(savedText);
 
 
         // finds btn with id of i
@@ -24,8 +32,9 @@ $(document).ready(function () {
         btn.click(function () {
             // finds text area (Needs to happen again??? think scope is why)
             var textArea = $("textarea#" + i + "-text");
+
             // logs the text in text area
-            console.log(textArea.val());
+            // console.log(textArea.val());
 
             // saves the text from textarea to localstorage at point i
             localStorage.setItem(i, textArea.val());
