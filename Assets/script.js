@@ -1,9 +1,11 @@
+// waits for page to load
 $(document).ready(function () {
     // gets current date
     date = moment().format("dddd, MMMM Do");
 
     // gets the current hour
     hour = parseInt(moment().format("HH"));
+    // hour = 12;
 
     // gets id of currentDay
     currentDayTxt = $("#currentDay");
@@ -58,5 +60,4 @@ $(document).ready(function () {
             // console.log("present");
         }
     }
-
 });
