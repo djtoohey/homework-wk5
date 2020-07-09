@@ -35,5 +35,6 @@ Other:
     added comments 
     made README.md
 ```
+![work day scheduler complete](assets\finished.png)
 
 GitHub Pages: https://djtoohey.github.io/homework-wk5/index.html
